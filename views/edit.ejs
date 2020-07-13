@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotel</title>
+	<link rel="stylesheet" type="text/css" href="css/cs.css">
+	<script type="text/javascript" src="js/js.js"></script>
+	<script src="jquery/jquery.min.js"></script>
+	<style type="text/css">
+		video{
+    z-index: -100;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+	</style>
+</head>
+<body >
+    <section id="daftar">
+        <div class="df">
+           <form action="/updatePesan"  method="post">
+            <input type="hidden" value="<%= pesan.id %>" name="id">
+            <h1>Form Pendaftaran</h1>
+    
+            <fieldset id="FormAction">
+                <legend>Data Pemesan</legend>
+    
+                <div >
+                    <label >Nama Lengkap <font color="red">*</font></label><br>
+                    <input type="text" name="id_nama" placeholder="Isi nama pemesan sesuai KTP/Paspor/SIM (tanpa tanda baca/gelar)" required>
+                </div>
+                <div >
+                    <label>No Handphone <font color="red">*</font></label>
+                    <input type="number" name="id_phone" placeholder="+62xxxxxxxxxxx" required>
+                </div> 
+                <div >
+                    <label >Alamat Email</label>
+                    <input type="email" name="email" placeholder="contoh@gmail.com" >
+                </div>
+          
+                <div >
+                    <label >Jenis Kelamin <font color="red">*</font></label>
+                    <select name="gender">
+                        <option value="pria">Pria</option>
+                        <option value="wanita">Wanita</option>
+                    </select>
+                </div>
+                <div >
+                    <label >Tanggal Boking Hotel <font color="red">*</font></label>
+                    <input type="date" name="time_boking"> 
+                </div>
+                <div>
+                    <label >Waktu <font color="red">*</font></label>
+                    <select name="time" >
+                        <option value="1 hari">1 hari</option>
+                        <option value="2 hari">2 hari</option>
+                        <option value="3 hari">3 hari</option>
+                        <option value="4 hari">4 hari</option>
+                        <option value="5 hari">5 hari</option>
+                        <option value="6 hari">6 hari</option>
+                        <option value="7 hari">7 hari</option>
+                        
+                    </select>
+                </div>
+                <div>
+                    <label >Type Kamar <font color="red">*</font> <a onclick="info()"><font color="red">info!</font></a></label>
+                    <select name="Type_kamar" >
+                        <option value="Standard & Superior Room">Standard & Superior Room</option>
+                        <option value="Deluxe Room">Deluxe Room</option>
+                        <option value="Suite">Suite</option>
+                        <option value="Club Dan Executive">Club Dan Executive</option>
+                        <option value="Twin, Double, dan Family">Twin, Double, dan Family</option>
+                    </select>
+    
+                </div>
+            </fieldset>
+            <fieldset id="FormAction">
+                <legend>Apakah sudah selesai lur?</legend>
+    
+                <input type="reset" value="Hapus Form">
+                <input type="submit"  value="Update">
+                <a href="/PP"  class="kemba">Kembali</a>
+            </fieldset>
+        </form>
+    
+        <div class="footer">
+         <br>
+            <h4 align="center">
+                Copy right 2020 Ujian Akhir Semester
+            </h4>
+        </div>
+    </section>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+  // menambah scrol agar pelan
+  $("a").on('click', function(event) {
+
+    // membuat hash(#) sebagai yang dipilih
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+
+      // menggunkan jQuery's animate() agar scrolnya pelan
+      // angka untuk kecepatan scroling
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1500, function(){
+   
+        // saat di klik langsung ke #
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+</script>
+</html>
+
+
+
+
+
+
+
+

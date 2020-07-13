@@ -1,0 +1,101 @@
+<html>
+<head><title>Wisata</title>
+<link href="css/cs.css" rel="stylesheet" type="text/css">
+<script src="jquery/jquery.min.js"></script>
+</head>
+<body bgcolor="#8587cd">
+
+        <div class="menuatas ">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#objek">Menu</a></li>
+                
+            </ul>
+        </div>
+		<div class="slide">
+       <input type="radio" name="radio" checked="checked"/>
+            <img src="img/home/fp.jpg" name="radio"/>
+		</div>
+		<div class="slogan" id="objek">
+        <br>
+        <h1 align="center">Wisata Daerah Istimewa Yogyakarta</h1>
+        <h4 align="center">Daerah Istimewa Yogyakarta mempunyai banyak tempat-tempat wisata yang sangat menarik, selain itu Daerah Istimewa Yogyakarta juga mempunyai banyak
+            makanan-makanan khas dari daerah masing-masing dengan cita rasa yang sangat <br> mengugah selera, saat wisata jangan
+            takut tidur dimana karena setiap wisata mempunyai hotel yang nyaman dan aman.
+        </h4>
+    </div>
+    <div class="belakang" >
+        <div class="belakangimg">
+            <a href="/objek"><img src="img/kamera.png" class="gambar"></a>
+            <h2 align="center">Wisata Daerah</h2>
+            <h4 align="center">DIY mempunyai wisata daerah dimana-mana</h4>
+        </div>
+        <div class="belakangimg">
+            <a href="/company"><img src="img/profil.png" class="gambar"></a>
+                <h2 align="center">Profil</h2>
+                <h4 align="center">Profil Perusahaan Kami</h4>
+        </div>
+        <div class="belakangimg" >
+            <a href="/hotel"><img src="img/hotel.png" class="gambar"></a>
+                <h2 align="center">Hotel</h2>
+                <h4 align="center">Untuk menginap saat berwisata</h4>
+        </div>
+        
+    </div>
+	 <div class="bg" id="portofolio">
+        <div class="menubawah">
+            <ul>
+                <li><a href="#">objek wisata</a></li>
+                <li><a href="hotel.html">hotel</a></li>
+                
+
+            </ul>
+        </div>
+        <div>
+            <div align="center" class="por">
+                <a href="/zaki"><img  src="img/zak.jpeg" /></a>
+                <a href="/dito"><img class="" src="img/dit.jpg"/></a>
+                <a href="/felix"> <img class=""  src="img/lix.jpg"/></a>
+                
+
+            </div>
+            <div align="center" class="por">
+                <a href="/fauzan"> <img class=""  src="img/ujang.jpeg"/></a>
+                <a href="/haunan"> <img class=""  src="img/nan.jpg"/></a>
+                <a href="/faraz"><img class="" src="img/frz.jpg"/></a>
+               
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+     <br>
+        <h4 align="center">
+            Copy right 2020 Ujian Akhir Semester
+        </h4>
+    </div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+  // menambah scrol agar pelan
+  $("a").on('click', function(event) {
+
+    // membuat hash(#) sebagai yang dipilih
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+
+      // menggunkan jQuery's animate() agar scrolnya pelan
+      // angka untuk kecepatan scroling
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1500, function(){
+   
+        // saat di klik langsung ke #
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+</script>
+</html>

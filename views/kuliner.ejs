@@ -1,0 +1,110 @@
+<html>
+<head><title>Pariwisata</title>
+<link href="css/cs.css" rel="stylesheet" type="text/css">
+<script src="jquery/jquery.min.js"></script>
+</head>
+<body bgcolor="#8587cd">
+        <div class="menuatas ">
+            <ul>
+                <li><a href="/">home</a></li>
+               <li><a href="#objek">menu</a></li>
+                <li><a href="#portopolio">portopolio</a></li>
+                
+            </ul>
+        </div>
+    
+    <div class="slide">
+       <input type="radio" name="radio" checked="checked"/>
+            <img src="img/header/ragam.png" name="radio"/>
+
+            <input type="radio" name="radio"/>
+            <img src="img/header/hotel.png" name="radio"/>
+
+            <input type="radio" name="radio"/>
+            <img src="img/header/makan.png" name="radio"/>
+        </input>
+    </div>
+    <div class="slogan" id="objek">
+        <br>
+        <h1 align="center">Wisata Jawa Timur</h1>
+        <h4 align="center">Jawa Timur mempunyai banyak tempat-tempat wisata yang sangat menarik, selain itu Jawa Timur juga mempunyai banyak
+            makanan-makanan khas dari daerah masing-masing dengan cita rasa yang sangat <br> mengugah selera, saat wisata jangan
+            takut tidur dimana karena setiap wisata mempunyai hotel yang nyaman dan aman.
+        </h4>
+    </div>
+    <div class="belakang">
+        <div class="belakangimg">
+            <a href="/Objek"><img src="img/kamera.png" class="gambar"></a>
+            <h2 align="center">Wisata Daerah</h2>
+            <h4 align="center">Jawa Timur mempunyai wisata daerah dimana-mana</h4>
+        </div>
+        <div class="belakangimg">
+            <a href="/hotel"><img src="img/hotel.png" class="gambar"></a>
+                <h2 align="center">Penginapan</h2>
+                <h4 align="center">Saat berwisata kita tidak usah binggung untuk menginap dimana karena setiap daerah mempunyai hotel.</h4>
+        </div>
+        <div class="belakangimg" >
+            <a href="/tempatmakan"><img src="img/makan.png" class="gambar"></a>
+                <h2 align="center">Tempat Makan</h2>
+                <h4 align="center">Untuk makan pagi,siang, dan malam kita juga bisa makan di tempat-tempat ini</h4>
+        </div>
+        
+    </div>
+
+    <div class="bg" id="portopolio">
+        <div class="menubawah">
+            <ul>
+                <li><a href="/">objek wisata</a></li>
+                <li><a href="#.html">kuliner</a></li>
+                <li><a href="/hotel">hotel</a></li>
+                
+
+            </ul>
+        </div>
+        <div>
+            <div class="por">
+                <a href="/wisbukitjadih"><img  src="img/kuliner/kuliner.jpg" /></a>
+                <a href="/wisarosbaya"><img class="" src="img/kuliner/mamong.jpg"/></a>
+                <a href="/wisbukitjadih"> <img class=""  src="img/kuliner/sate.jpg"/></a>
+                <a href=""><img src="img/kuliner/tw.jpg"/></a>
+
+            </div>
+            <div class="por">
+                <a href=""> <img class=""  src="img/kuliner/blitar.jpg"/></a>
+                <a href=""> <img class=""  src="img/kuliner/cecek.jpg"/></a>
+                <a href=""><img class="" src="img/kuliner/tu.jpg"/>
+                <a href=""> <img class=""  src="img/kuliner/st.jpg"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+     <br>
+        <h4 align="center">
+            Copy right 2020 Ujian Akhir Semester
+        </h4>
+    </div>
+    <audio style="width: 100%; " loop="true" autoplay src="audio/Away.mp3" controls></audio>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+  // menambah scrol agar pelan
+  $("a").on('click', function(event) {
+
+    // membuat hash(#) sebagai yang dipilih
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+
+      // menggunkan jQuery's animate() agar scrolnya pelan
+      // angka untuk kecepatan scroling
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1500, function(){
+   
+        // saat di klik langsung ke #
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});</script>
+</html>
